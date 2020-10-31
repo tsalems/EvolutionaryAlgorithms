@@ -1,0 +1,5 @@
+
+Dataset	Classifier	Train	Test
+landsatImg	StackingClassifier	0.9360438367729238	0.9229023328491472
+sat.all	StackingClassifier	0.9804368275787063	0.9036545018981288
+ulc	StackingClassifier	0.9892978301395994	0.8400351185250219

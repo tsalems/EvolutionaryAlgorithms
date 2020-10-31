@@ -1,0 +1,10 @@
+
+Dataset	Classifier	Train	Test
+
+Dataset	Classifier	Train	Test
+
+Dataset	Classifier	Train	Test
+datasets\sat.all.txtDE	1.0	0.8548559257363099
+
+Dataset	Classifier	Train	Test
+datasets\sat.all.txtDE	1.0	0.8523721781633068

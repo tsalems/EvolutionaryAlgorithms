@@ -1,0 +1,71 @@
+30/10/2020 21:25:28
+Dataset	avgTrain	minFull	avgFull	maxFull	min	avg	max	AllFeature	SelectedFeature	BestIndividual
+ab     	2       	       	       	       	   	   	   	          	               	              
+       	        	       	       	       	   	   	   	          	               	              Number of Features in Subset: 	18/36
+30/10/2020 21:26:35
+Dataset	avgTrain	minFull	avgFull	maxFull	min	avg	max	AllFeature	SelectedFeature	BestIndividual
+ab     	2       	       	       	       	   	   	   	          	               	              
+       	        	       	       	       	   	   	   	          	               	              Number of Features in Subset: 	18/36
+30/10/2020 21:38:33
+Dataset	avgTrain	minFull 	avgFull 	maxFull 	min     	avg     	max     	AllFeature	SelectedFeature	BestIndividual                                                                                              
+sat.all	1       	0.832298	0.854857	0.868012	0.832298	0.854857	0.868012	36        	18             	[1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1]30/10/2020 21:40:20
+Dataset	avgTrain	minFull	avgFull 	maxFull 	min    	avg     	max     	AllFeature	SelectedFeature	BestIndividual                                                                                              
+sat.all	1       	0.82764	0.851126	0.877329	0.82764	0.851126	0.877329	36        	20             	[1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1]
+31/10/2020 09:01:53
+Dataset	avgTrain	minFull 	avgFull 	maxFull 	min     	avg     	max     	AllFeature	SelectedFeature	BestIndividual                                                                                              
+sat.all	1       	0.828927	0.850657	0.875583	0.828927	0.850657	0.875583	36        	19             	[0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1]
+
+31/10/2020 09:05:45
+Dataset	avgTrain	minFull 	avgFull	maxFull	min     	avg    	max    	AllFeature	SelectedFeature	BestIndividual                                                                                              
+sat.all	1       	0.836703	0.85159	0.86646	0.836703	0.85159	0.86646	36        	20             	[0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1]
+
+31/10/2020 09:19:07
+Dataset	avgTrain	minFull 	avgFull 	maxFull 	min     	avg     	max     	AllFeature	SelectedFeature	BestIndividual                                                                                              
+sat.all	1       	0.830745	0.857193	0.878694	        	        	        	          	               	                                                                                                            
+       	        	        	        	        	0.826087	0.848486	0.861801	36        	17             	[0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0]--------------------------------------------------------------------------------
+31/10/2020 09:23:03
+Dataset	avgTrain	minFull 	avgFull 	maxFull 	min     	avg     	max     	AllFeature	SelectedFeature	BestIndividual                                                                                              
+sat.all	1       	0.827372	0.855939	0.875776	        	        	        	          	               	                                                                                                            
+       	        	        	        	        	0.841369	0.854696	0.875776	36        	17             	[1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0]
+--------------------------------------------------------------------------------
+31/10/2020 09:24:58
+Dataset	avgTrain	minFull 	avgFull 	maxFull 	min     	avg     	max     	AllFeature	SelectedFeature	BestIndividual                                                                                              
+sat.all	1       	0.836703	0.853773	0.874028	        	        	        	          	               	                                                                                                            
+       	        	        	        	        	0.822706	0.857965	0.874028	36        	19             	[1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0]
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+31/10/2020 09:29:30
+Dataset	avgTrain	minFull 	avgFull	maxFull 	min     	avg     	max     	AllFeature	SelectedFeature	BestIndividual                                                                                              
+sat.all	1       	0.830745	0.85843	0.877329	        	        	        	          	               	                                                                                                            
+       	        	        	       	        	0.815217	0.845693	0.854037	36        	13             	[0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0]
+----------------------------------------------------------------------------------------------------
+31/10/2020 09:35:40
+--------------------
+Dataset	avgTrain	minFull 	avgFull 	maxFull 	min     	avg     	max     	AllFeature	SelectedFeature	BestIndividual                                                                                              
+sat.all	1       	0.841615	0.855947	0.872671	        	        	        	          	               	                                                                                                            
+       	        	        	        	        	0.804044	0.837301	0.877138	36        	17             	[0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1]
+----------------------------------------------------------------------------------------------------
+31/10/2020 09:36:58
+ |--------------------
+Dataset	avgTrain	minFull 	avgFull 	maxFull 	min     	avg     	max     	AllFeature	SelectedFeature	BestIndividual                                                                                              
+sat.all	1       	0.841615	0.855322	0.872671	        	        	        	          	               	                                                                                                            
+       	        	        	        	        	0.824534	0.846159	0.880249	36        	18             	[0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1]
+----------------------------------------------------------------------------------------------------
+31/10/2020 09:37:53 |
+--------------------
+Dataset	avgTrain	minFull 	avgFull 	maxFull 	min     	avg     	max     	AllFeature	SelectedFeature	BestIndividual                                                                                              
+sat.all	1       	0.822706	0.857962	0.878694	        	        	        	          	               	                                                                                                            
+       	        	        	        	        	0.819876	0.847708	0.866252	36        	24             	[1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1]
+----------------------------------------------------------------------------------------------------
+31/10/2020 18:26:55
+--------------------
+
+----------------------------------------------------------------------------------------------------
+31/10/2020 18:33:19
+--------------------
+
+----------------------------------------------------------------------------------------------------
+31/10/2020 18:52:18
+--------------------
+Dataset	avgTrain	minFull 	avgFull 	maxFull 	min     	avg    	max     	AllFeature	SelectedFeature	BestIndividual                                                                                              
+sat.all	1       	0.830745	0.858272	0.878882	        	       	        	          	               	                                                                                                            
+       	        	        	        	        	0.822981	0.85035	0.871118	36        	19             	[0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0]
