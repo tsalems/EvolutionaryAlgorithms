@@ -595,3 +595,8 @@ Started
 29/10/2020 15:23:27 - INFO - TEST: 0.8400351185250219
 
 29/10/2020 15:23:27 - INFO - Finished
+01/11/2020 01:13:10 - INFO - 
+Started
+01/11/2020 01:13:10 - INFO - ------------------------------1.dataset:landsatImg------------------------------
+01/11/2020 01:13:10 - INFO - 1.AdaBoostClassifier
+01/11/2020 01:13:10 - INFO - Accuracy Model with 10 KFold:

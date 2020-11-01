@@ -1,15 +1,13 @@
 # Particle Swarm Optimization
 
+import math
 import operator
 import random
 from os.path import isfile
 
 import numpy as np
 import pandas as pd
-import math
-
 from deap import base
-from deap import benchmarks
 from deap import creator
 from deap import tools
 from sklearn.model_selection import train_test_split, cross_val_score
@@ -107,7 +105,6 @@ def getFitness(individual, X, y):
     """
     Feature subset fitness function
     """
-
     if individual.count(0) != len(individual):
         # get index with value 0
         cols = [index for index in range(
@@ -123,21 +120,13 @@ def getFitness(individual, X, y):
         #     X_subset[col].values[:] = 0
 
         clf = DecisionTreeClassifier()
-
-        # clf.fit(X, y)
-        # clf.fit(X_subset, y_train)
         clf.fit(X_subset, y)
 
         # y_pred_ANN = clf.predict(X_test)
         # y_pred = clf.predict(X_subset)
 
-        # score = cross_val_score(clf, X, y, cv=5)
-        #
-        # print(max(score), min(score))
-
-        return (avg(cross_val_score(clf, X_subset, y, cv=5)),)
-        # return (avg(score),)
         # return accuracy_score(y, y_pred_ANN)
+        return (avg(cross_val_score(clf, X_subset, y, cv=5)),)
     else:
         return (0,)
 
@@ -174,7 +163,8 @@ def eaPSO(pop, toolbox, npop, ngen, stats=None,
 
         # Gather all the fitnesses in one list and print the stats
         # Tổng hợp tất cả các fitness trong một list và show số liệu thống kê
-        logbook.record(gen=g, evals=len(pop), **stats.compile(pop))
+        # logbook.record(gen=g, evals=len(pop), **stats.compile(pop))
+        logbook.record(gen=g, evals=len(pop), **stats.compile(halloffame))
         if verbose:
             print(logbook.stream)
 
@@ -246,8 +236,8 @@ def bestIndividual(hof, X, y):
 def main():
     # GEN = 1000
     # best = None
-    n_pop = 50
-    n_gen = 50
+    n_pop = 5
+    n_gen = 5
 
     satimage = fetch_datasets()
     X, y = satimage.data, satimage.target
