@@ -3,6 +3,7 @@ import random
 import numpy as np
 import pandas as pd
 from deap import creator, base, tools, algorithms
+from sklearn.metrics import accuracy_score
 from sklearn.model_selection import cross_val_score, train_test_split
 from sklearn.tree import DecisionTreeClassifier
 
@@ -29,10 +30,10 @@ def getFitness(individual, X, y):
         clf = DecisionTreeClassifier()
         clf.fit(X_subset, y)
 
-        # y_pred = clf.predict(X_subset)
+        y_pred = clf.predict(X_subset)
 
-        # return accuracy_score(y, y_pred_ANN)
-        return (avg(cross_val_score(clf, X_subset, y, cv=5)),)
+        return accuracy_score(y, y_pred)
+        # return (avg(cross_val_score(clf, X_subset, y, cv=5)),)
     else:
         return (0,)
 
@@ -97,8 +98,8 @@ if __name__ == '__main__':
     # n_pop = getConfig("GA-CONFIG", "populationSIZE")
     # n_gen = getConfig("GA-CONFIG", "generationNUM")
 
-    n_pop = 50
-    n_gen = 50
+    n_pop = 5
+    n_gen = 5
 
     f = open("GA-result.txt", "a")
     f.write("\n" + "-" * 100 + "\n")
@@ -142,7 +143,8 @@ if __name__ == '__main__':
 
         print("\nGA processing ...\n")
         # apply genetic algorithm
-        hof = geneticAlgorithm(X_train_df, y_train, n_pop, n_gen)
+        # hof = geneticAlgorithm(X_train_df, y_train, n_pop, n_gen)
+        hof = geneticAlgorithm(X_df, y, n_pop, n_gen)
         # select the best individual
         accuracy, individual, header = bestIndividual(hof, X, y)
 

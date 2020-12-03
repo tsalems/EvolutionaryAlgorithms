@@ -163,8 +163,8 @@ def eaPSO(pop, toolbox, npop, ngen, stats=None,
 
         # Gather all the fitnesses in one list and print the stats
         # Tổng hợp tất cả các fitness trong một list và show số liệu thống kê
-        # logbook.record(gen=g, evals=len(pop), **stats.compile(pop))
-        logbook.record(gen=g, evals=len(pop), **stats.compile(halloffame))
+        logbook.record(gen=g, evals=len(pop), **stats.compile(pop))
+        # logbook.record(gen=g, evals=len(pop), **stats.compile(halloffame))
         if verbose:
             print(logbook.stream)
 

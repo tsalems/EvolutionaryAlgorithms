@@ -1,3 +1,4 @@
+import array
 import random
 
 import numpy as np
@@ -106,18 +107,21 @@ def eaNSGA2(pop, toolbox, cxpb, mutpb, npop, ngen, stats=None,
     return pop, front[0], logbook
 
 
-def geneticAlgorithm(X, y, n_population, n_generation):
+def geneticAlgorithm(X, y, n_population, n_generation, n_dimension):
     """
     Deap global variables
     Initialize variables to use eaSimple
     """
     # create individual
-    creator.create("FitnessMax", base.Fitness, weights=(1.0,))
-    creator.create("Individual", list, fitness=creator.FitnessMax)
+    # creator.create("FitnessMax", base.Fitness, weights=(1.0,))
+    creator.create("FitnessMin", base.Fitness, weights=(1.0, 1.0))
+    # creator.create("Individual", list, fitness=creator.FitnessMax)
+    creator.create("Individual", array.array, typecode='d', fitness=creator.FitnessMin)
 
     # create toolbox
     toolbox = base.Toolbox()
     toolbox.register("attr_bool", random.randint, 0, 1)
+    # toolbox.register("attr_float", uniform, BOUND_LOW, BOUND_UP, NDIM)
     toolbox.register("individual", tools.initRepeat,
                      creator.Individual, toolbox.attr_bool, len(X.columns))
     toolbox.register("population", tools.initRepeat, list,
@@ -125,7 +129,9 @@ def geneticAlgorithm(X, y, n_population, n_generation):
     # toolbox.register("evaluate", getFitness, X=X, y=y)
     toolbox.register("evaluate", benchmarks.rmsClass, X=X, y=y)
     toolbox.register("mate", tools.cxTwoPoint)
+    # toolbox.register("mate", tools.cxSimulatedBinaryBounded, low=0, up=1, eta=20.0)
     toolbox.register("mutate", tools.mutFlipBit, indpb=0.05)
+    # toolbox.register("mutate", tools.mutPolynomialBounded, low=0, up=1, eta=20.0, indpb=1.0 / n_dimension)
     # toolbox.register("select", tools.selTournament, tournsize=3)
     toolbox.register("select", tools.selNSGA2)
 
@@ -150,11 +156,12 @@ def bestIndividual(hof, X, y):
     """
     Get the best individual
     """
-    maxAccurcy = 0.0
+    _individual = None
+    minAccurcy = 2.0
     for individual in hof:
         # if (individual.fitness.values > maxAccurcy):
-        if individual.fitness.values[0] > maxAccurcy:
-            maxAccurcy = individual.fitness.values[0]
+        if individual.fitness.values[0] < minAccurcy:
+            minAccurcy = individual.fitness.values[0]
             _individual = individual
 
     _individualHeader = [list(X)[i] for i in range(
@@ -204,12 +211,15 @@ if __name__ == '__main__':
         # get accuracy with all features
         individual = [1 for i in range(len(X_df.columns))]
 
+        NDIM = len(X_df.columns)
+
         print("Accuracy with All features:")
         accuracy_train_full, accuracy_test_full = AccKFold(individual, X_df, y)
 
         print("\nNSGA2 processing ...\n")
         # apply genetic algorithm
-        hof, front0 = geneticAlgorithm(X_train_df, y_train, n_pop, n_gen)
+        # hof, front0 = geneticAlgorithm(X_train_df, y_train, n_pop, n_gen)
+        hof, front0 = geneticAlgorithm(X_df, y, n_pop, n_gen, NDIM)
         # select the best individual
         accuracy, individual, header = bestIndividual(front0, X, y)
 
